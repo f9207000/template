@@ -1,5 +1,5 @@
 {
-  "name": "colorgame",
+  "name": "template",
   "version": "1.0.0",
   "description": "",
   "main": "func.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/f9207000/ColorGame.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/f9207000/ColorGame/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/f9207000/ColorGame#readme",
+  "homepage": "",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
