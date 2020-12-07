@@ -1,25 +1,35 @@
 // in webpack.config.js
 var path = require('path');
 var webpack = require('webpack');
+
+const srcPath = path.resolve(__dirname, 'src');
+const distPath = path.resolve(__dirname, 'dist');
+
 module.exports = {
-    context: path.resolve(__dirname, './src'),
+    context: srcPath,
+    resolve: {
+        alias: {
+            components: path.resolve(srcPath, 'components')
+        }
+    },
     entry: {
-        main: ['@babel/polyfill', './main.js'],
+        index: './index.jsx',
+        reactVendor: ['react', 'react-dom']
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: distPath,
         filename: '[name].bundle.js'
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: [/node_modules/],
                 use: [{
                     loader: 'babel-loader',
                     options: {
                         presets: [['@babel/preset-env',
-                                {modules: false}]]
+                                {modules: false}], '@babel/preset-react']
                     }
                 }]
             },
