@@ -5,6 +5,8 @@
   "main": "func.js",
   "scripts": {
     "bundle": "webpack",
+    "watch": "webpack -w",
+    "startServer": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,13 +21,15 @@
   "homepage": "",
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.9.0",
-    "webpack-cli": "^4.2.0"
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",

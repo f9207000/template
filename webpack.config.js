@@ -29,10 +29,13 @@ module.exports = {
                     loader: 'babel-loader',
                     options: {
                         presets: [['@babel/preset-env',
-                                {modules: false}], '@babel/preset-react']
+                                {modules: false}], '@babel/preset-react'],
+                        plugins: ["@babel/plugin-proposal-class-properties"]
                     }
-                }]
+                }],
+                
             },
+                
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
@@ -50,5 +53,9 @@ module.exports = {
             }
         }
     },
-
+    devServer: {
+        contentBase: distPath,
+        compress: true,
+        port: 8980
+    }
 };
